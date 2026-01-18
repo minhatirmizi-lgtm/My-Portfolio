@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Travel Route Map</title>
+
+  <!-- Local Leaflet CSS -->
+  <link rel="stylesheet" href="leaflet.css" />
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Travel Route Map</h1>
+    <button id="resetBtn" title="Reset view to full route">Reset View</button>
+  </header>
+
+  <main class="container">
+    <aside class="sidebar">
+      <h2>My Travel Plan</h2>
+      <ol id="locations">
+        <li><button class="loc-btn" data-idx="0">Karachi</button></li>
+        <li><button class="loc-btn" data-idx="1">Hyderabad</button></li>
+        <li><button class="loc-btn" data-idx="2">Sukkur</button></li>
+      </ol>
+    </aside>
+
+    <div id="map" role="application" aria-label="Map with travel route"></div>
+  </main>
+
+  <!-- Local Leaflet JS -->
+  <script src="leaflet.js"></script>
+
+  <!-- Your JS -->
+  <script src="script.js"></script>
+  <script>
+    L.Icon.Default.mergeOptions({
+      iconUrl: 'marker-icon.png',
+      iconRetinaUrl: 'marker-icon-2x.png',
+      shadowUrl: 'marker-shadow.png'
+    });
+  </script>
+</body>
+</html>

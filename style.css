@@ -1,0 +1,49 @@
+:root {
+  --primary: #0d6efd;
+  --bg: #ffffff;
+  --text-main: #212529;
+  --card-bg: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.95);
+}
+
+body.dark-mode {
+  --bg: #121212;
+  --text-main: #f8f9fa;
+  --card-bg: #1e1e1e;
+  --nav-bg: rgba(18, 18, 18, 0.95);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  transition: all 0.3s ease;
+  /* FIX: This padding ensures you can scroll to the very top */
+  padding-top: 80px; 
+  margin: 0;
+}
+
+.navbar {
+  background-color: var(--nav-bg) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.profile-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--primary);
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  height: 100%;
+}
+
+.project-title-text {
+  color: var(--text-main) !important;
+  font-size: 1rem;
+  margin-top: 10px;
+}
